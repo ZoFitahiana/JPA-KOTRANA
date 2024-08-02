@@ -1,7 +1,10 @@
 package com.fresh.coding.attachapijavains3.services.impl;
 
+import com.fresh.coding.attachapijavains3.dto.CategorieForm;
 import com.fresh.coding.attachapijavains3.entities.Category;
+import com.fresh.coding.attachapijavains3.mapper.CategorieMapper;
 import com.fresh.coding.attachapijavains3.services.CategoryService;
+import lombok.AllArgsConstructor;
 import lombok.Cleanup;
 import lombok.SneakyThrows;
 import org.springframework.stereotype.Service;
@@ -19,15 +22,27 @@ import java.util.HashMap;
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class CategoryServiceImpl implements CategoryService {
 
     private static final String CATEGORIES_CSV_PATH = "src/main/resources/s3_database/categories.csv";
     private static final String TEMP_CSV_PATH = "src/main/resources/s3_database/temp_categories.csv";
+    private  final CategorieMapper categorieMapper;
 
     @Override
     public List<Category> findAllCategories() {
         ensureFilesExist();
         return readCategoriesFromFile();
+    }
+
+    public  Long getMaxId(){
+        List<Category> categories = findAllCategories();
+        long result = 0L;
+        for (Category category : categories) {
+            var id = Long.valueOf(category.getId());
+           result = id > result ? id : result ;
+        }
+        return result;
     }
 
     @SneakyThrows
@@ -49,7 +64,7 @@ public class CategoryServiceImpl implements CategoryService {
         }
 
         for (var category : categories) {
-            existingCategoriesMap.put(Long.valueOf(category.getId()), category);
+            existingCategoriesMap.put(Long.valueOf(category.getId()),category);
         }
 
         @Cleanup BufferedWriter writer = Files.newBufferedWriter(tempCsvPath);

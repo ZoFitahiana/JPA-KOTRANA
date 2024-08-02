@@ -1,0 +1,31 @@
+id,name,description,price,isStock,category_id
+1,Smartphone,Latest model smartphone with advanced features,699.99,true,1
+2,Laptop,High-performance laptop for gaming and productivity,1199.99,true,1
+3,T-shirt,Cotton t-shirt in various colors,19.99,true,2
+4,Sneakers,Comfortable sneakers for everyday wear,89.99,true,2
+5,Novel,Bestselling novel by a famous author,14.99,true,3
+6,Desk,Wooden desk with adjustable height,299.99,true,4
+7,Chair,Ergonomic office chair with lumbar support,149.99,true,4
+8,Action Figure,Collectible action figure from popular movie series,29.99,true,5
+9,Chocolate Bar,Organic chocolate bar with assorted flavors,2.99,true,6
+10,Shampoo,Shampoo for all hair types,8.99,true,7
+11,Tennis Racket,High-quality tennis racket for competitive play,99.99,true,8
+12,Car Battery,Replacement battery for most car models,129.99,true,9
+13,Refrigerator,Energy-efficient refrigerator with large capacity,499.99,true,10
+14,Electric Guitar,Electric guitar with accessories for beginners,349.99,true,11
+15,DVD Player,DVD player with HDMI output,49.99,true,12
+16,Stapler,Heavy-duty stapler for office use,15.99,true,13
+17,Dog Food,Nutritional food for dogs,24.99,true,14
+18,Drill,Power drill for home improvement projects,79.99,true,15
+19,Outdoor Table,Table for garden use with weather-resistant material,129.99,true,16
+20,Watch,Stylish wristwatch with a leather strap,199.99,true,17
+21,Acrylic Paint,Set of acrylic paints in various colors,29.99,true,18
+22,Monitor,27-inch monitor with 4K resolution,299.99,true,19
+23,Travel Backpack,Durable backpack for travel and outdoor adventures,89.99,true,20
+24,Blender,High-speed blender for smoothies and soups,69.99,true,10
+25,Headphones,Noise-cancelling headphones with wireless connectivity,149.99,true,1
+26,Camera,Digital camera with high resolution and video recording,499.99,true,1
+27,Sofa,Comfortable sofa with modern design,599.99,true,4
+28,Board Game,Family board game with fun and educational activities,39.99,true,5
+29,Tea Set,Complete tea set with teapot and cups,49.99,true,6
+30,Face Cream,Moisturizing face cream with anti-aging properties,24.99,true,7
